@@ -1,0 +1,129 @@
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.064);
+}
+
+h1{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+
+.wrapper{
+    width: 37.5rem;
+    height: 50vh;
+    position: relative;
+    background-image: url(/assets/img/pokedex.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.501));
+}
+
+.wrapper::before{
+    content: '';
+    position: absolute;
+    width: 11.7rem;
+    height: 7.8rem;
+    /* background-color: rgba(0, 0, 0, 0.672); */
+    background-image: url('/assets/img/bgdefault.png');
+    background-position: center;
+    background-size: cover;
+    top: 9.875rem;
+    left: 4.063rem;
+    border-radius: .5rem;
+    /* display: none; */
+}
+
+.pokemon{
+    position: absolute;
+    width: 9rem;
+    top: 8.5rem;
+    left: 5.5rem;
+}
+
+.type{
+    position: absolute;
+    width: 6.075rem;
+    height: 2.813rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(1, 79, 1);
+    color: white;
+    font-size: 1.2rem;
+    bottom: 3.25rem;
+    left: 5.088rem;
+    border-radius: 0.313rem;
+    border: 1px solid rgba(0, 0, 0, 0.227);
+    cursor:default;
+    user-select: none;
+}
+
+input[type='button']{
+    width: 5.438rem;
+    height: 1.938rem;
+    border-radius: 0.313rem;
+    font-weight: bold;
+    background-color: rgb(16, 16, 16);
+    color: white;
+    border: none;
+    transform: translate3d(0.188rem, -0.188rem, 0);
+    box-shadow: -0.125rem 0.125rem 0 rgb(28, 28, 28), -0.188rem 0.188rem 0 rgb(16, 16, 16);
+    cursor: pointer;
+}
+
+input[type='button']:active{
+    font-size: .6rem;
+    transform: translate3d(-0.063rem, 0.063rem, 0);
+    box-shadow: inset 0 0 0 rgb(28, 28, 28);
+    transition: transform ease-out .2s;
+}
+
+.next{
+    position: absolute;
+    bottom: 3.625rem;
+    right: 9.375rem;
+}
+
+.prev{
+    position: absolute;
+    bottom: 3.625rem;
+    right: 2.938rem;
+}
+
+.status{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 12rem/* 31.5% */;
+    height: 4.438rem/* 15% */;
+    background-color: rgba(24, 24, 24, 0.668);
+    top: 10.5rem /* 35% */;
+    right: 2.938rem /* 8% */;
+    border: none;
+    border-radius: 0.313rem;
+    color: rgba(104, 205, 3, 0.839);
+    font-size: 1.2rem;
+    cursor:default;
+    user-select: none;
+    /* display: none; */
+}
+
+.status span{
+    margin-right: 1.25rem;
+}
