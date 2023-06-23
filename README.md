@@ -1,5 +1,5 @@
 
-#Pokédex
+# Pokédex
 
-##Projeto feito em HTML, CSS e JS Puro
+## Projeto feito em HTML, CSS e JS Puro
 
