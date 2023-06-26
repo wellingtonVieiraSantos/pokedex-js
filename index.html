@@ -8,17 +8,21 @@
     <script src="/assets/js/script.js" defer></script>
 </head>
 <body>
+    <div class="circleOne circles"></div>
+    <div class="circleTwo circles"></div>
     <h1>Pokédex</h1>
     <div class="wrapper">
-        <input type="button" class='next' value="<">
-        <input type="button" class='prev' value=">">
+        <input type="button" class='prev' value="<">
+        <input type="button" class='next' value=">">
         <div class="status">
-            <span>001</span>
-            <span>Bulbasaur</span>
+            <input type="number" id="id">
+            <input type="text" id="name" autocomplete="off">
+            <!-- <span id="id">001</span>
+            <span id="name">Bulbasaur</span> -->
         </div>
-        <img src="/assets/img/teste.png" alt="" class="pokemon">
+        <img src="" alt="" class="pokemonImg">
         <div class="type">
-            <span>Grass</span>
+            <span id="type"></span>
         </div>
     </div>
 </body>
