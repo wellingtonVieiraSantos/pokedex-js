@@ -65,7 +65,7 @@ h1{
     width: 37.5rem;
     height:  50%;
     position: relative;
-    background-image: url(/assets/img/pokedex.png);
+    background-image: url(../img/pokedex.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -77,14 +77,12 @@ h1{
     position: absolute;
     width: 11.7rem;
     height: 7.8rem;
-    /* background-color: rgba(0, 0, 0, 0.672); */
-    background-image: url(/assets/img/bgdefault.png);
+    background-image: url(../img/bgdefault.png);
     background-position: center;
     background-size: cover;
     top: 9.875rem;
     left: 4.063rem;
     border-radius: .5rem;
-    /* display: none; */
 }
 
 .pokemonImg{
@@ -161,9 +159,6 @@ input[type='button']:active{
     border-radius: 0.313rem;
     color: rgba(104, 205, 3, 0.839);
     font-size: 1.2rem;
-    /* cursor:default; */
-    /* user-select: none; */
-    /* display: none; */
 }
 
 .status input{
