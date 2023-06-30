@@ -91,6 +91,14 @@ h1{
     height: 7rem;
     top: 10.3rem;
     left: 6.4rem;
+    transition: all .2s linear;
+}
+
+.small{
+    width: 4rem;
+    height: 4rem;
+    top: 11.3rem;
+    left: 7.4rem;
 }
 
 .type{

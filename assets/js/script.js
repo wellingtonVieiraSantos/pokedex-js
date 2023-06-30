@@ -140,6 +140,9 @@ const createHTML = (data) =>{
     pokemonName.value = captalizeName(data.name)
     pokemonId.value = normalizeNumber(data.id)
     pokemonType.innerText = captalizeName(data.types[0].type.name)
+
+    data.height < 12 ? pokemonImage.classList.add('small') : pokemonImage.classList.remove('small')
+
     pokemonImage.setAttribute('src', data.sprites.versions['generation-v']['black-white'].animated.front_default)
 
     pokemonTypeBgcolor.style.backgroundColor = pokemonTypes[data.types[0].type.name].bg
@@ -148,6 +151,8 @@ const createHTML = (data) =>{
     circles.map(circle => {
         circle.style.backgroundColor = pokemonTypes[data.types[0].type.name].bg
     })
+
+    
 }
 
 const captalizeName = (data) =>{
@@ -163,3 +168,4 @@ const normalizeNumber = (data) =>{
 const normalizeName = (data) => {
     return data.replace(/\s/g, '').toLowerCase()
 }
+
