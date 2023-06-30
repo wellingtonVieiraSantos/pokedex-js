@@ -141,7 +141,16 @@ const createHTML = (data) =>{
     pokemonId.value = normalizeNumber(data.id)
     pokemonType.innerText = captalizeName(data.types[0].type.name)
 
-    data.height < 12 ? pokemonImage.classList.add('small') : pokemonImage.classList.remove('small')
+    if(data.height <= 6){
+        pokemonImage.style.height = (6 * 7) / 16 + 'rem'
+        pokemonImage.style.width = (6 * 7) / 16 + 'rem'
+    }else if(data.height <= 16){
+        pokemonImage.style.height = (data.height * 7) / 16 + 'rem'
+        pokemonImage.style.width = (data.height * 7) / 16 + 'rem'
+    }else{
+        pokemonImage.style.height = (16 * 7) / 16 + 'rem'
+        pokemonImage.style.width = (16 * 7) / 16 + 'rem'
+    }
 
     pokemonImage.setAttribute('src', data.sprites.versions['generation-v']['black-white'].animated.front_default)
 
@@ -169,3 +178,5 @@ const normalizeName = (data) => {
     return data.replace(/\s/g, '').toLowerCase()
 }
 
+
+//fazer um data.height responsivo e passar um maximo em if para nao quebrar o layout

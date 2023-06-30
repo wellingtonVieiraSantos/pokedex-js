@@ -9,6 +9,7 @@
 
 body{
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -44,11 +45,11 @@ body{
 }
 
 @keyframes moveBig{
-    0%{ transform: translate3d(10%, 0%, 0);}
+    0%{ transform: translate3d(0, 0, 0);}
     25%{transform: translate3d(20%, 10%, 0);}
     50%{transform: translate3d(30%, 0, 0);}
     75%{transform: translate3d(20%, -10%, 0);}
-    100%{transform: translate3d(10%, 0, 0);}
+    100%{transform: translate3d( 0, 0, 0);}
 }
 @keyframes moveSmall{
     0%{ transform: translateX(0);}
@@ -63,7 +64,7 @@ h1{
 
 .wrapper{
     width: 37.5rem;
-    height:  50%;
+    height:  30rem;
     position: relative;
     background-image: url(../img/pokedex.png);
     background-position: center;
@@ -72,33 +73,23 @@ h1{
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.501));
 }
 
-.wrapper::before{
-    content: '';
+.img{
     position: absolute;
-    width: 11.7rem;
-    height: 7.8rem;
+    width: 11.9rem;
+    height: 8rem;
     background-image: url(../img/bgdefault.png);
     background-position: center;
     background-size: cover;
     top: 9.875rem;
-    left: 4.063rem;
+    left: 3.863rem;
     border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pokemonImg{
-    position: absolute;
-    width: 7rem;
-    height: 7rem;
-    top: 10.3rem;
-    left: 6.4rem;
     transition: all .2s linear;
-}
-
-.small{
-    width: 4rem;
-    height: 4rem;
-    top: 11.3rem;
-    left: 7.4rem;
 }
 
 .type{
@@ -121,7 +112,7 @@ h1{
 }
 
 input[type='button']{
-    width: 5.438rem;
+    width: 5.538rem;
     height: 1.938rem;
     border-radius: 0.313rem;
     font-weight: bold;
@@ -142,14 +133,14 @@ input[type='button']:active{
 
 .prev{
     position: absolute;
-    bottom: 3.625rem;
-    right: 9.375rem;
+    bottom: 3.695rem;
+    right: 9.275rem;
 }
 
 .next{
     position: absolute;
-    bottom: 3.625rem;
-    right: 2.938rem;
+    bottom: 3.695rem;
+    right: 2.800rem;
 }
 
 .status{
@@ -185,6 +176,10 @@ input[type='button']:active{
     outline: none;
 }
 
+input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -192,4 +187,44 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .status input::placeholder{
     color: rgba(104, 205, 3, 0.839);
+}
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+    h1{
+        display: none;
+    }
+    .wrapper{
+        height: 98%;
+        width: 88%;
+    }
+    .img{
+        width: 30%;
+        height: 33%;
+        top: 29%;
+        left: 12.5%;
+    }
+
+    .type{
+        width: 20%;
+        height: 12%;
+        bottom: 2.5%;
+        left: 13%;
+    }
+    .status{
+        width: 30.5%;
+        height: 18%;
+        top: 32.5%;
+        right: 9.5%;
+    }
+    input[type='button']{
+        width: 15%;
+        height: 9%;
+        bottom: 4%;
+    }
+    .prev{
+        right: 25%;
+    }
+    .next{
+        right: 9%;
+    }
 }
